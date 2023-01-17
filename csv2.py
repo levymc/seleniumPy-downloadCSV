@@ -8,7 +8,7 @@ from datetime import date, timedelta
 from bs4 import BeautifulSoup
 from time import sleep
 
-
+## Gerenciador de Tarefas - 13:45 da tarde todos os dias.
 hoje = date.today().strftime("%d-%m-%Y")
 path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Tarde'
 options = webdriver.ChromeOptions()
