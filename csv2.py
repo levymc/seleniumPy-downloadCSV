@@ -12,7 +12,7 @@ from time import sleep
 hoje = date.today().strftime("%d-%m-%Y")
 path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Tarde'
 options = webdriver.ChromeOptions()
-options.headless = True
+options.headless = False
 prefs = {
     'download.default_directory': path.replace('/', '\\'),
 }

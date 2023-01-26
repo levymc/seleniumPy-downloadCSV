@@ -8,7 +8,7 @@ from datetime import date, timedelta
 from bs4 import BeautifulSoup
 from time import sleep
 
-
+sleep(240)
 hoje = date.today().strftime("%d-%m-%Y")
 path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Manhã'
 options = webdriver.ChromeOptions()
@@ -39,15 +39,15 @@ navegador.find_element(By.XPATH, '//*[@id="sel"]').click()
 navegador.find_element(By.XPATH, '/html/body/div/div/table/tbody/tr/td/div/table[2]/tbody/tr/td[1]/div/input').click()
 
 # Espera a página carregar e clica em "Confirma" 2ª vez
-wait = WebDriverWait(navegador, 10) # aguarda por 10 segundos
+wait = WebDriverWait(navegador, 30) # aguarda por 10 segundos
 element = wait.until(EC.presence_of_element_located((By.ID, 'form')))
 navegador.find_element(By.XPATH, '//*[@id="form"]/table[2]/tbody/tr/td/strong/input').click()
 
 # Espera a página carregar e clica em "Clique Aqui", para realizar o download do csv
-wait = WebDriverWait(navegador, 10) # aguarda por 10 segundos
+wait = WebDriverWait(navegador, 30) # aguarda por 10 segundos
 element2 = wait.until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "Clique")))
 navegador.find_element(By.PARTIAL_LINK_TEXT, "Clique").click()
 
-sleep(5)
+sleep(10)
 navegador.quit()
 
