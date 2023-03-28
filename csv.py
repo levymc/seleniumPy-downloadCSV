@@ -8,11 +8,11 @@ from datetime import date, timedelta
 from bs4 import BeautifulSoup
 from time import sleep
 
-sleep(240)
+# sleep(240)
 hoje = date.today().strftime("%d-%m-%Y")
 path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Manhã'
 options = webdriver.ChromeOptions()
-options.headless = True
+options.headless = False
 prefs = {
     'download.default_directory': path.replace('/', '\\'),
 }
