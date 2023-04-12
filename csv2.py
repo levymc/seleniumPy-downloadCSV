@@ -9,8 +9,10 @@ from bs4 import BeautifulSoup
 from time import sleep
 
 ## Gerenciador de Tarefas - 13:45 da tarde todos os dias.
+meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+mes = date.today().month -1
 hoje = date.today().strftime("%d-%m-%Y")
-path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Tarde'
+path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/'+ meses[mes] + '/' + hoje + r'/Tarde' 
 options = webdriver.ChromeOptions()
 options.headless = False
 prefs = {

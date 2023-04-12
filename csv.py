@@ -9,8 +9,10 @@ from bs4 import BeautifulSoup
 from time import sleep
 
 # sleep(240)
+meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+mes = date.today().month -1
 hoje = date.today().strftime("%d-%m-%Y")
-path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/' + hoje + r'/Manhã'
+path = r'//NasTecplas/Public/3 ADMINISTRATIVO/FISCAL/CSV Etiquetas/'+ meses[mes] + '/' + hoje + r'/Manhã'
 options = webdriver.ChromeOptions()
 options.headless = False
 prefs = {
